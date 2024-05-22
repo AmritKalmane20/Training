@@ -157,7 +157,7 @@ for i, d in frame_labels.iterrows():
     color = color_map[d["category"]]
     img_example = cv2.rectangle(img_example, pt1, pt2, color, 3)
     pt_text = int(d["box2d.x1"]) + 5, int(d["box2d.y1"] + 10)
-    img_example = cv2.putText(img_example, d["category"], pt_text, font, 0.5, color)
+    img_example = cv2.putText(img_example, d["category"], pt_text, font, 1.0, color)
 display_cv2_img(img_example)
 cap.release()
 
